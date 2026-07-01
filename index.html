@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BiteExpress - Order delicious gourmet food online from the comfort of your home. Lightning-fast delivery, wide variety of options including pizzas, burgers, biryanis, and more.">
+  <title>BiteExpress | Premium Online Food Delivery</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation Bar -->
+  <header class="main-header" id="main-header">
+    <div class="container navbar-container">
+      <a href="#" class="logo" id="header-logo">
+        <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+        <span class="logo-text">Bite<span>Express</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#menu-section">Menu</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#footer-section">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Live Search -->
+        <div class="search-box" id="search-box-container">
+          <input type="text" id="food-search" placeholder="Search for dishes, cuisines...">
+          <button class="search-btn" id="search-action-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!-- Cart Trigger Badge Button -->
+        <button class="cart-trigger" id="cart-trigger-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-counter">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" id="mobile-nav-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-tagline"><i class="fa-solid fa-fire"></i> Hungry? We've Got You Covered</span>
+          <h1 class="hero-title">Delicious Gourmet Food Delivered To <span>Your Doorstep</span></h1>
+          <p class="hero-description">Experience lightning fast delivery, top-tier kitchen hygiene, and signature dishes from the city's best chefs. Order now and get 20% off on your first delivery!</p>
+          <div class="hero-buttons">
+            <a href="#menu-section" class="btn btn-primary" id="hero-cta-btn">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#about-section" class="btn btn-secondary">Learn More</a>
+          </div>
+          <!-- Trust Badges -->
+          <div class="hero-badges">
+            <div class="badge-item">
+              <i class="fa-solid fa-motorcycle"></i>
+              <span>30 Min Delivery</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-star"></i>
+              <span>4.9 Rated App</span>
+            </div>
+            <div class="badge-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>100% Safe Payment</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-bg-accent"></div>
+          <img src="images/burger.jpg" alt="Tasty gourmet hamburger" class="hero-image" id="hero-promo-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filter Section -->
+    <section class="categories-section" id="categories-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Craving Category</span>
+          <h2 class="section-title">What's on Your Mind?</h2>
+        </div>
+        
+        <div class="category-pills" id="category-filters-container">
+          <button class="category-pill active" data-category="all" id="cat-all">
+            <span class="cat-icon"><i class="fa-solid fa-border-all"></i></span>
+            <span class="cat-name">All Foods</span>
+          </button>
+          <button class="category-pill" data-category="burger" id="cat-burger">
+            <span class="cat-icon"><i class="fa-solid fa-hamburger"></i></span>
+            <span class="cat-name">Burgers</span>
+          </button>
+          <button class="category-pill" data-category="pizza" id="cat-pizza">
+            <span class="cat-icon"><i class="fa-solid fa-pizza-slice"></i></span>
+            <span class="cat-name">Pizzas</span>
+          </button>
+          <button class="category-pill" data-category="biryani" id="cat-biryani">
+            <span class="cat-icon"><i class="fa-solid fa-bowl-rice"></i></span>
+            <span class="cat-name">Biryani</span>
+          </button>
+          <button class="category-pill" data-category="sandwich" id="cat-sandwich">
+            <span class="cat-icon"><i class="fa-solid fa-bread-slice"></i></span>
+            <span class="cat-name">Sandwich</span>
+          </button>
+          <button class="category-pill" data-category="fries" id="cat-fries">
+            <span class="cat-icon"><i class="fa-solid fa-hotdog"></i></span>
+            <span class="cat-name">Fries</span>
+          </button>
+          <button class="category-pill" data-category="pasta" id="cat-pasta">
+            <span class="cat-icon"><i class="fa-solid fa-plate-wheat"></i></span>
+            <span class="cat-name">Pasta</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Menu Section -->
+    <section class="menu-section" id="menu-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="sub-title">Bestsellers & Specials</span>
+            <h2 class="section-title">Popular Dishes For You</h2>
+          </div>
+          <div class="menu-search-secondary">
+            <!-- Search status or message can go here dynamically -->
+            <p class="search-summary-text" id="search-status-message"></p>
+          </div>
+        </div>
+
+        <!-- Food Cards Grid -->
+        <div class="food-grid" id="food-menu-grid">
+          <!-- Dynamically filled by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about-section">
+      <div class="container about-container">
+        <div class="about-image-side">
+          <div class="about-bg-accent"></div>
+          <img src="images/pizza.jpg" alt="Fresh baked pizza" class="about-img">
+        </div>
+        <div class="about-content-side">
+          <span class="sub-title">Why Choose Us?</span>
+          <h2 class="section-title">We Deliver Quality Food Direct To Your Doorstep</h2>
+          <p class="about-text">Over the last decade, BiteExpress has partnered with top-tier food joints and Michelin-starred chefs to bring you local and international culinary delights. We maintain rigorous standards of hygiene and pack food in thermal-insulated layers to keep it fresh and hot.</p>
+          
+          <ul class="about-features">
+            <li>
+              <div class="feat-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="feat-desc">
+                <strong>Premium Ingredients</strong>
+                <p>We cook food with high-quality organic produce and healthy fats.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feat-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="feat-desc">
+                <strong>Lightning Fast Deliveries</strong>
+                <p>Dedicated rider network ensures delivery within 30 minutes, or it's free.</p>
+              </div>
+            </li>
+            <li>
+              <div class="feat-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="feat-desc">
+                <strong>Hassle-Free Checkout</strong>
+                <p>One-tap digital payments and seamless cancellation policies.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sliding Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <div class="cart-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Your Cart (<span id="cart-drawer-count">0</span>)</h3>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Shopping Cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Scrollable Cart Content -->
+    <div class="cart-body" id="cart-drawer-body">
+      <!-- Dynamically filled with cart items or empty message -->
+    </div>
+
+    <!-- Sticky Cart Summary & Checkout Footer -->
+    <div class="cart-footer">
+      <div class="price-row">
+        <span>Subtotal</span>
+        <span class="summary-val" id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="price-row">
+        <span>Delivery Fee</span>
+        <span class="summary-val text-green" id="cart-delivery-fee">FREE</span>
+      </div>
+      <div class="price-row total-row">
+        <span>Total Amount</span>
+        <span class="summary-val total-price" id="cart-total-price">₹0.00</span>
+      </div>
+      
+      <button class="btn btn-primary btn-checkout" id="checkout-submit-btn">
+        Proceed to Checkout <i class="fa-solid fa-circle-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Confirmation Dialog / Modal -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="modal-content" id="checkout-modal-content">
+      <button class="modal-close-btn" id="modal-close-action-btn" aria-label="Close Checkout Popup"><i class="fa-solid fa-xmark"></i></button>
+      <div class="success-icon-wrapper">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      </div>
+      <h2 class="modal-title">Order Placed Successfully!</h2>
+      <p class="modal-message">Thank you for dining with BiteExpress. Your meal is being prepared with top-notch hygiene standards and will arrive shortly.</p>
+      
+      <div class="order-summary-box">
+        <div class="summary-detail-row">
+          <span>Order ID:</span>
+          <strong id="modal-order-id">#BE-98231</strong>
+        </div>
+        <div class="summary-detail-row">
+          <span>Estimated Time:</span>
+          <strong id="modal-est-time">25-30 minutes</strong>
+        </div>
+        <div class="summary-detail-row">
+          <span>Total Paid:</span>
+          <strong class="text-primary-color" id="modal-total-paid">₹0.00</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="modal-success-confirm-btn">Track My Order</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="footer-section">
+    <div class="container footer-grid">
+      <!-- Column 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+          <span class="logo-text">Bite<span>Express</span></span>
+        </a>
+        <p class="footer-desc">Delicious, freshly prepared meals from the best chefs, delivered straight to your door step in under 30 minutes.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col links-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul>
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#menu-section">Our Menu</a></li>
+          <li><a href="#about-section">About Us</a></li>
+          <li><a href="#">Offers & Discounts</a></li>
+          <li><a href="#">Hygiene Certificate</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col contact-col">
+        <h4 class="footer-title">Contact Us</h4>
+        <ul class="contact-details-list">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) 555-BITE</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>support@biteexpress.com</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>100 Foodie Boulevard, Gourmet Plaza, NY 10001</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-title">Join Our Newsletter</h4>
+        <p class="newsletter-desc">Subscribe to get the latest coupon codes, special recipes, and discount notifications.</p>
+        <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input type="email" placeholder="Your Email Address" required aria-label="Email address for newsletter">
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 BiteExpress Delivery. All Rights Reserved.</p>
+        <div class="footer-terms">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Files -->
+  <script src="script.js"></script>
+</body>
+</html>
